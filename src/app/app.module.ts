@@ -9,6 +9,16 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { OrdersTableComponent } from './pages/orders/orders-table/orders-table.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatTableModule } from "@angular/material/table";
+import { MatInputModule } from "@angular/material/input";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatSortModule } from "@angular/material/sort";
+
+
 
 @NgModule({
   declarations: [
@@ -16,13 +26,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     OrdersComponent,
     PageNotFoundComponent,
-    NavbarComponent
+    NavbarComponent,
+    OrdersTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+
+    // material
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
